@@ -1,0 +1,987 @@
+/************************************************************/
+/*			              fonts      	                    */
+/************************************************************/
+
+@font-face{
+	font-family:Uni Sans Book;
+	src: url('../fonts/UniSansBook.otf');
+}
+
+@font-face{
+	font-family:Uni Sans Light;
+	src: url('../fonts/UniSansLight.otf');
+}
+
+@font-face{
+	font-family:Uni Sans Bold;
+	src: url('../fonts/UniSansBold.otf');
+}
+
+@font-face{
+	font-family:Uni Sans Heavy;
+	src: url('../fonts/UniSansHeavy.otf');
+}
+
+@font-face{
+	font-family:Uni Sans Semi Bold;
+	src: url('../fonts/UniSansSemiBold.otf');
+}
+
+/************************************************************/
+/*			              variabes   	                    */
+/************************************************************/
+
+$container-width : 82.5em;
+$container-width-2 : 81em;
+$nav-width: 75em;
+$container-height: 38em;
+$blue : #76B0C1;
+$darkblue : #42758F;
+$green : #90C5A9;
+$darkgreen: #42A58F;
+$orange : #F78F28;
+$darkorange : #EF6D3B;
+$grey : #DBDBDB;
+$darkgrey: #666666;
+$lightgrey: rgba(168, 168, 168, 0.5);
+$overlay : rgba(0, 0, 0, 0.6);
+
+/************************************************************/
+/*			              main       	                    */
+/************************************************************/
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+	font-size: 1em;
+}
+
+body {
+	background: $grey; 
+	font-family: Uni Sans Book;
+	font-size: 1em;
+}
+
+html, body {
+	height: 100%;
+}
+
+a, a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+div {
+	font-size: 100%;
+}
+
+table {
+	box-sizing:border-size;
+}
+
+.container {
+	width: 100%;
+	min-width: $container-width;
+	padding: 0px;
+	margin: auto;
+}
+
+.container-2 {
+	width: 100%;
+	min-width: $container-width-2;
+	padding: 0px;
+	margin: auto;
+}
+
+.outer-wrapper {
+	width: $container-width-2;
+	overflow: hidden;
+	margin: auto;
+	padding: 0px;
+	height: auto;
+	min-height: 30em;
+}
+
+.u3-5, .u5, .u6-5, .ufull {
+	min-height: 1px;
+	padding: 20px 30px;
+}
+
+.u5 {
+	width: 49%;
+}
+
+.u6-5 {
+	width: 64%;
+}
+
+.u3-5 {
+	width: 34%;
+}
+
+.ufull {
+	width: 100%;
+}
+
+.row {
+	width: 100%;
+	margin: 30px auto;
+	padding: 0px 4em;
+
+	& div:first-child{
+		float:left;
+	}
+
+	& div:last-child{
+		float: right;
+	}
+}
+
+.row-width-2 {
+	width: $container-width-2!important;
+}
+
+/************************************************************/
+/*			              front page 	                    */
+/************************************************************/
+
+
+/*** navbar ***/
+
+.nav-bar {
+	background-color: $blue;
+	height: 40px;
+	position: fixed;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+	border:none;
+	color: white;
+	z-index: 999;
+	float: none;
+
+	.nav-wrapper {
+		width: $nav-width;
+		height: 100%;
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+
+		.search {
+			display: inline-block;
+			vertical-align: middle;
+			float: left;
+			margin-left: -1em;
+
+			.search-btn {
+				background-color: transparent;
+				background-image: url('../etc/MagGlass.png');
+				position:relative;
+				left: 1em;
+				bottom: 33px;
+				width: 45px;
+				height: 25px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 20px;
+				vertical-align: middle;
+				border: none;
+				display: inline-block;
+				z-index: 3;
+				float: right;
+
+			}
+
+			.search-filter {
+				background-color: transparent;
+				background-image: url('../etc/SearchFilter.png');
+				position:relative;
+				left: 45px;
+				top:3px;
+				margin-left: -40px;
+				width: 2.2em;
+				height: 34px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 2.2em;
+				vertical-align: middle;
+				border: none;
+				float: left;
+			}
+		}
+
+		.logo {
+			height: 100%;
+			width: 50px;
+			background-image: url('../etc/LogoToolbar.png');
+			background-color: transparent;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size:auto 40px;
+			margin:0px;
+			padding: 0px 0.5em;
+			display: inline-block;
+			float: left;
+		}
+
+		.menu {
+			padding: 0em;
+			height: 40px;
+			margin: 0px 1em;
+			display: inline-block;
+			float: left;
+			vertical-align: middle;
+
+			ul {
+				list-style: none;
+				margin: 0px;
+				padding: 5px 0px;
+				font-size: 1.15em;
+				height: 100%;
+				display: table;
+				float: left;
+				margin-top: 1px;
+
+			}
+
+			ul li {
+				display: table-cell;
+				padding: 0px 0.3em;
+				vertical-align: middle;
+			}
+		}
+		.more-menu {
+			padding: 0px;
+			margin-right: 1em;
+			height: 40px;
+			display: inline-block;
+			float: right;
+			vertical-align: middle;
+
+
+			ul {
+				list-style: none;
+				padding: 0px;
+				margin: 0px;
+				height: 100%;
+				vertical-align: middle;
+				display: table;
+			}
+
+			ul li {
+				height: 100%;
+				vertical-align: middle;
+				padding: 0.2em 0.5em;
+				display: table-cell;
+
+
+				#avatar {
+					width: 2.3em;
+					height: 2.3em;
+					border-radius: 100%;
+					display: table-cell;
+					vertical-align: middle;
+					border: solid 1px #FFF;
+				}
+
+				#help, #settings {
+					width: 2em;
+					height: 2em;
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+
+		}
+	}
+}
+
+.navbar-form {
+	margin: 0em auto!important;
+	width: 35em;
+	padding: 0px 1em;
+}
+
+
+.navbar-form > .form-control {
+	padding: 0px 50px;
+	font-size: 1.2em;
+	height: 30px;
+	margin: 5px auto;
+	vertical-align: middle;
+	width: 28em;
+}
+
+
+/*** end navbar ***/
+
+
+/*** logo layer ***/
+
+.logo-wrapper {
+	height: 110px;
+	width: 100%;
+	background-color: $grey;
+	z-index: 1;
+}
+
+.logo-wrapper::after {
+	content: " ";
+    height:70px;
+    width:140px;
+    border-radius: 0 0 140px 140px;
+    background-color: $grey;
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: 50%;
+    margin-left: -70px;
+    z-index: 2;
+    border: solid 1px $darkgrey;
+    border-top: solid 1px transparent;
+}
+
+.logo-wrapper > .logo-tab{
+	background-image: url('../etc/LightbulbIdeaButton.png');
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 110px;
+	width: 110px;
+	position: relative;
+	top: 52px;
+	left: 50%;
+	margin-left: -55px;
+	z-index: 3;
+
+}
+
+/*** end logo layer ***/
+
+/*** carousel layer ***/
+
+//have to change code later
+.carousel {
+	height: 250px;
+	background: url(../etc/banner.jpg) center center no-repeat;
+	background-size: cover;
+	margin-bottom: 10px;
+	border-bottom: solid 1px $darkgrey;
+	border-top: solid 1px $darkgrey;
+
+	.overlay {
+		height: 100%;
+		width: 100%;
+		background-color: $overlay; 
+	}
+}
+
+/*** end carousel layer ***/
+
+/*** content layer ***/
+
+#content {
+	.u3-5, .u5, .u6-5 {
+		height: $container-height;
+		border: solid 1px $darkgrey;
+		background-color: #FFF;
+		
+
+		img {
+			height: 4em;
+		}
+
+		h1 {
+			line-height: 2em;
+			font-size: 2.5em;
+			margin: 0px;
+			padding: 0px;
+			font-family: Uni Sans Bold;
+		}
+	}
+}
+
+#discussions {
+	box-shadow: 0 10px 0 $orange;
+
+	h1 {
+		color: $darkorange;
+	}
+}
+
+#leaderboards {
+	box-shadow: 0 10px 0 $orange;
+
+	h1 {
+		color: $darkorange;
+	}
+}
+
+#campaigns {
+
+	box-shadow: 0 10px 0 $green;
+
+	h1 {
+		color: $darkgreen;
+	}
+}
+
+#ventures {
+	box-shadow: 0 10px 0 $blue;
+
+	h1 {
+		color: $darkblue;
+	}
+}
+
+/*** end content layer ***/
+/************************************************************/
+/*			             end front page 	                */
+/************************************************************/
+
+/************************************************************/
+/*			              dicussions page 	                */
+/************************************************************/
+
+.content {
+	width: 100%;
+
+	.title-div {
+		height: 190px;
+		border: solid 1px $darkgrey;
+		margin-bottom: 50px;
+		background-color: #FFF;
+
+		h1 {
+			font-size: 3.3em;
+			font-family: Uni Sans Bold;
+		}
+
+		img {
+			margin-top: 10px;
+		}
+	}
+
+	.content-div {
+		border: solid 1px $darkgrey;
+		background-color: #FFF;
+		margin-bottom: 50px;
+
+		ul {
+			list-style: none;
+		}
+
+		ul li {
+			padding-bottom: 20px;
+		}
+
+		ul li h4 {
+			font-family: Uni Sans Semi Bold;
+			font-size: 1.5em;
+		}
+
+		ul li table {
+			text-align: left;
+			width: 100%;
+			font-size: 1.2em;
+			font-family: Uni Sans Light;
+
+			tr {
+
+				th {
+					font-family: Uni Sans Book;
+					font-weight: normal;
+				}
+
+				th, td {
+					height: 2em;
+					padding: 0 1em;
+				}
+
+				td {
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+}
+
+#discussions-section {
+	.title-div, .content-div {
+		box-shadow: 0 10px 0 $orange;
+	}
+
+	.title-div {
+		color: $darkorange;
+	}
+
+	.content-div table{
+		tr{
+			th {
+				border-bottom: solid 3px $orange;
+			}
+
+			th.title, th.backers, th.creators {
+					width: 20%;
+				}
+
+			th.date {
+				width: 40%;
+			}
+		}
+	}
+}
+
+#discussions-form {
+	height: auto;
+	color: $darkorange;
+	box-shadow: 0 10px 0 $orange;
+}
+
+/************************************************************/
+/*			              end discussions page 	            */
+/************************************************************/
+
+/************************************************************/
+/*			             ventures page 	                    */
+/************************************************************/
+
+#ventures-section {
+	.title-div, .content-div {
+		box-shadow: 0 10px 0 $blue;
+	}
+
+	.title-div {
+		color: $darkblue;
+	}
+
+	.content-div table{
+		tr{
+			th {
+				border-bottom: solid 3px $blue;
+			}
+
+			th.title, th.backers, th.creators {
+					width: 20%;
+				}
+
+			th.date {
+				width: 40%;
+			}
+		}
+	}
+}
+
+/************************************************************/
+/*			             end ventures page 	                */
+/************************************************************/
+
+
+/************************************************************/
+/*			             persons page 	                    */
+/************************************************************/
+#persons-section {
+	.title-div, .content-div {
+		box-shadow: 0 10px 0 $blue;
+	}
+
+	.title-div {
+			color: $darkblue;
+		}
+
+	.content-div table{
+		tr{
+			th {
+				border-bottom: solid 3px $blue;
+			}
+
+			th.avatar, th.points {
+					width: 8%;
+				}
+
+			th.name, th.department, th.email {
+				width: 28%;
+			}
+			
+			th, td {
+				padding: 0.5em 1em;
+				vertical-align: middle;
+			}
+
+			td img {
+				max-width: 2em;
+				border-radius: 100%;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+/************************************************************/
+/*			             end persons page 	                */
+/************************************************************/
+
+
+/************************************************************/
+/*			             campaigns page 	                */
+/************************************************************/
+#campaigns-section {
+	.title-div, .content-div {
+		box-shadow: 0 10px 0 $green;
+	}
+
+	.title-div {
+		color: $darkgreen;
+	}
+}
+
+.foo-div {
+	border: solid 1px $darkgrey;
+	background: #FFF;
+	margin-bottom: 50px;
+}
+
+.heading{
+		height: auto;
+		width: 100%;	
+		margin-bottom: 0px;
+		background-color: #FFF;
+
+		h1 {
+			font-size: 3.3em;
+			font-family: Uni Sans Bold;
+		}
+
+		img {
+			margin-top: 10px;
+		}
+}
+
+.foo-form {
+	font-size: 1.5em;
+	color: $darkgrey;
+	clear: both;
+
+	input[type="text"], textarea {
+		width: 100%;
+		padding: 0.25em;
+		border-radius: 3px;
+		border: solid 1px $darkgrey;
+		margin-bottom: 20px;
+	}
+
+	input[type="submit"] {
+		margin: 30px auto 50px auto;
+		display: block;
+		border-radius: 3px;
+		border: solid 1px $darkgrey;
+		padding: 0.25em;
+
+	}
+
+	textarea {
+		height: 150px;
+		resize: none;
+	}
+
+	div {
+		margin-bottom: 20px;
+	}
+
+	.people-list {
+
+		ul {
+			list-style: none;
+			display: table;
+			padding: 0 0em;
+		}
+
+		ul li {
+			display: table-cell;
+		}
+
+		ul li img {
+			max-width: 3em;
+			border-radius: 100%;
+			border: solid 1px $darkgrey;
+		}
+	}
+
+	.keywords-list {
+		ul {
+			list-style: none;
+			display: table;
+			padding: 0 0em;
+		}
+
+		ul li {
+			display: inline-block;
+			font-size: 0.8em;
+			padding: 0em 1em;
+			margin-right: 1em;
+			background-color: $lightgrey;
+		}
+
+	}
+}
+
+#campaigns-form {
+	height: auto;
+	color: $darkgreen;
+	box-shadow: 0 10px 0 $green;
+}
+
+/*** campaign-form ***/
+
+/************************************************************/
+/*			             end campaigns page 	            */
+/************************************************************/
+
+
+/************************************************************/
+/*			              profile page 	                    */
+/************************************************************/
+.logo-wrapper-2 {
+	border-bottom: none!important;
+}
+
+#profile-section {
+	color: $darkblue;
+
+	.row {
+		padding: 0px;
+		margin: 0 0 50px;
+
+		.u6-5, .u3-5 {
+			background-color: #FFF;
+			height: 275px;
+			border: solid 1px $darkgrey;
+			box-shadow: 0 10px 0 $blue;
+		}
+
+		.u6-5 {
+			ul {
+				display: table;
+			}
+
+			ul li {
+				display: table-cell;
+				vertical-align: middle;
+				padding: 1.5em 1em;
+			}
+
+			ul li div.profile-picture {
+				height: 10em;
+				width: 10em;
+				padding: 0.25em;
+				border-radius: 100%;
+				border: solid 1px $darkgrey;
+
+				img {
+					height: 100%;
+					width: 100%;
+					border-radius: 100%;
+				}
+			}
+
+			ul li h1 {
+				font-family: Uni Sans Bold;
+			}
+
+			table {
+				width: 100%;
+				font-size: 1.25em;
+			}
+
+			table tbody tr td {
+				width: 50%;
+				height: 30px;
+			}
+
+			table tbody tr td:first-child {
+				text-align: left;
+			}
+
+			table tbody tr td:last-child{
+				text-align: right;
+			}
+		}
+	}
+}
+
+
+table.campaigns-created {
+
+	tr {
+
+		th {
+			border-bottom: solid 3px $blue;
+			width: 30%;
+		}
+
+		th.backed {
+			width: 10%;
+		}
+	}
+}
+
+table.campaigns-backed {
+
+	tr {
+
+		th {
+			border-bottom: solid 3px $blue;
+			width: 45%;
+		}
+
+		th.contributions {
+			width: 10%;
+		}
+	}
+}
+
+
+
+
+/************************************************************/
+/*			              end profile page 	                */
+/************************************************************/
+
+
+/************************************************************/
+/*			              login page 	                    */
+/************************************************************/
+
+html .overlay {
+	min-height: 100%;
+	z-index: -9;
+	background-color: rgba(137,187,206,0.3);
+}
+
+body.login {
+	background-image: url(../etc/signin-wallpaper.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -10;
+	min-height: 100%;
+
+	div.page-wrapper {
+		padding: 0px;
+		margin: 0px;
+	}
+
+	div.login-outer-wrapper {
+		width: 30em;
+		height: 37em;
+		background-color: rgba(225, 225, 225, 0.9);
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		top: 4em;
+		margin-bottom: 3em;
+
+		img {
+			max-width: 15em;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			padding: 2em 0em;
+		}
+
+		form {
+			width: 100%;
+			padding: 0em 6em;
+
+			input[type='text'], input[type='password'] {
+				width: 100%;
+				padding: 0.5em 0em 0em 0em;
+				font-size: 1.4em;
+				border-color: transparent;
+				border-bottom: solid 1px $blue;
+				background-color: transparent;
+			}
+
+			label {
+				font-weight: normal;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				color: #42758F;
+				font-size: 120%;
+				line-height: 1em;
+				vertical-align: middle;
+
+				input[type='checkbox'] {
+					display: inline-block;
+					width: 1.5em;
+
+					  /* Double-sized Checkboxes */
+					  -ms-transform: scale(1.8); /* IE */
+					  -moz-transform: scale(1.8); /* FF */
+					  -webkit-transform: scale(1.8); /* Safari and Chrome */
+					  -o-transform: scale(1.8); /* Opera */
+
+					line-height: 1.5em;
+					vertical-align: middle;
+					margin-top: -0.2em!important;
+				}
+
+				span {
+					margin-left: 5px;
+				}
+			}
+
+			.wrapper {
+				padding: 0em 2em;
+			}
+
+			div {
+				button {
+					font-size: 1.2em;
+					line-height: normal;
+					height: 1.9em;
+					vertical-align: middle;
+					margin: auto;
+					border: solid 1px #FFF;
+					background-color: $orange;
+					color: #FFF;
+					padding: 0.1em 0.3em;
+					border-radius: 5px;
+					float: left;
+
+				}
+
+				button:hover {
+					border: solid 1px $orange;
+					background-color: #FFF;
+					color: $orange;
+				}
+
+				input[type='submit'] {
+					font-size: 1.2em;
+					line-height:normal;
+					height: 1.9em;
+					vertical-align: middle;
+					margin: auto;
+					border: solid 1px #FFF;
+					background-color: $blue;
+					color: #FFF;
+					padding: 0.4em;
+					border-radius: 5px;
+					float: right;
+
+				}
+
+				input[type='submit']:hover {
+					border: solid 1px $blue;
+					background-color: #FFF;
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+/******************************************************/
+/*			          end login page   	              */
+/******************************************************/
