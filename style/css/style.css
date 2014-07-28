@@ -49,18 +49,12 @@ table {
 
 .container {
   width: 100%;
-  min-width: 82.5em;
-  padding: 0px;
-  margin: auto; }
-
-.container-2 {
-  width: 100%;
-  min-width: 81em;
+  min-width: 82em;
   padding: 0px;
   margin: auto; }
 
 .outer-wrapper {
-  width: 81em;
+  width: 82em;
   overflow: hidden;
   margin: auto;
   padding: 0px;
@@ -92,9 +86,6 @@ table {
   .row div:last-child {
     float: right; }
 
-.row-width-2 {
-  width: 81em !important; }
-
 /************************************************************/
 /*			              front page 	                    */
 /************************************************************/
@@ -111,7 +102,7 @@ table {
   z-index: 999;
   float: none; }
   .nav-bar .nav-wrapper {
-    width: 75em;
+    width: 78em;
     height: 100%;
     overflow: hidden;
     margin-left: auto;

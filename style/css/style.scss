@@ -31,9 +31,8 @@
 /*			              variabes   	                    */
 /************************************************************/
 
-$container-width : 82.5em;
-$container-width-2 : 81em;
-$nav-width: 75em;
+$container-width : 82em;
+$nav-width: 78em;
 $container-height: 38em;
 $blue : #76B0C1;
 $darkblue : #42758F;
@@ -88,15 +87,8 @@ table {
 	margin: auto;
 }
 
-.container-2 {
-	width: 100%;
-	min-width: $container-width-2;
-	padding: 0px;
-	margin: auto;
-}
-
 .outer-wrapper {
-	width: $container-width-2;
+	width: $container-width;
 	overflow: hidden;
 	margin: auto;
 	padding: 0px;
@@ -137,10 +129,6 @@ table {
 	& div:last-child{
 		float: right;
 	}
-}
-
-.row-width-2 {
-	width: $container-width-2!important;
 }
 
 /************************************************************/
